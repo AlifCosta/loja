@@ -3,9 +3,9 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="text-center">
-                    <h2>We use <span class="highlight">modern</span> infrastructure & technology</h2>
+                    <h2>Nos dispomos da <span class="highlight">melhor</span> infraestrutura</h2>
 
-                    <p>Lorem ipsum dolor sit amet, ne duis posse mei, ut cum vero nominati. Sed graece aeterno consectetuer te. Cu duo tota deleniti, vis ea fuisset nostrum. Meliore inciderint qui ne. Suas cotidieque vel ut ei eros perpetua qui. Ponderum lobortis reformidans</p>
+                    <p>Faltou criatividade para texto nessa parte entao so digitei coisas aleatorias para que a pessoa que esteja vendo esse site passe despercebida</p>
                 </div>
             </div>
         </div>
@@ -21,7 +21,7 @@
                                 <div class="icon">
                                     <i class="fa fa-desktop fa-5x"></i>
                                 </div>
-                                <h4>Fully responsive</h4>
+                                <h4>Multiplataformas</h4>
                             </div>
                         </div>
                     </div>
@@ -32,7 +32,7 @@
                                 <div class="icon">
                                     <i class="fa fa-file-code-o fa-5x"></i>
                                 </div>
-                                <h4>Fully responsive</h4>
+                                <h4>Feito com o Grails</h4>
                             </div>
                         </div>
                     </div>
@@ -43,7 +43,7 @@
                                 <div class="icon">
                                     <i class="fa fa-paper-plane-o fa-5x"></i>
                                 </div>
-                                <h4>Fully responsive</h4>
+                                <h4>Faz muitas coisas</h4>
                             </div>
                         </div>
                     </div>
@@ -54,7 +54,7 @@
                                 <div class="icon">
                                     <i class="fa fa-cubes fa-5x"></i>
                                 </div>
-                                <h4>Fully responsive</h4>
+                                <h4>Não sabia o que colocar nesse</h4>
                             </div>
                         </div>
                     </div>
@@ -152,38 +152,38 @@
                         <div class="icon">
                             <i class="fa fa-clock-o fa-5x"></i>
                         </div>
-                        <strong id="counter-coffee" class="number">1232</strong><br/>
-                        <span class="text">Minutes</span>
+                        <strong id="hora" class="number">1</strong><br/>
+                        <span class="text">Relogio</span>
                     </div>
                 </div>
 
                 <div class="col-xs-6 col-sm-3 col-md-3">
                     <div class="align-center color-white txt-shadow">
                         <div class="icon">
-                            <i class="fa fa-music fa-5x"></i>
+                            <i class="fa fa-bell fa-5x"></i>
                         </div>
-                        <strong id="counter-music" class="number">345</strong><br/>
-                        <span class="text">MP3 Songs</span>
+                        <strong id="counter-music" class="number">200</strong><br/>
+                        <span class="text">Notificações</span>
                     </div>
                 </div>
 
                 <div class="col-xs-6 col-sm-3 col-md-3">
                     <div class="align-center color-white txt-shadow">
                         <div class="icon">
-                            <i class="fa fa-coffee fa-5x"></i>
+                            <i class="fa fa-map-marker fa-5x"></i>
                         </div>
-                        <strong id="counter-clock" class="number">501</strong><br/>
-                        <span class="text">Coffee Cups</span>
+                        <strong id="counter-clock" class="number">11</strong><br/>
+                        <span class="text">Lojas</span>
                     </div>
                 </div>
 
                 <div class="col-xs-6 col-sm-3 col-md-3">
                     <div class="align-center color-white txt-shadow">
                         <div class="icon">
-                            <i class="fa fa-trophy fa-5x"></i>
+                            <i class="fa fa-calendar fa-5x"></i>
                         </div>
-                        <strong id="counter-heart" class="number">378</strong><br/>
-                        <span class="text">Awwards</span>
+                        <strong id="data" class="number"></strong><br/>
+                        <span class="text">Data</span>
                     </div>
                 </div>
             </div>

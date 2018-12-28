@@ -1,9 +1,9 @@
 package loja
 
 class Categoria{
-    String categoria
-    static hasOne = [produto:Produto]
+    String nome
+    static hasMany = [produtos:Produto]
     static constraints = {
-        categoria(blank:false,nullable:false,mazSize:100,unique: true)
+        nome(blank:false,nullable:false,mazSize:100,unique: true)
     }
 }

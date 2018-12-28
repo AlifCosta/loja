@@ -13,7 +13,7 @@
                 <h5 class="widgetheading">Categorias</h5>
                 <ul class="cat">
                     <g:each in="${loja.Categoria.list()}" var="c">
-                        <li><g:link controller="Categoria" action="listar" id="${c.id}">${c.categoria}</g:link></li>
+                        <li><g:link controller="Categoria" action="listar" id="${c.id}">${c.nome}</g:link></li>
                     </g:each>
                 </ul>
             </div>
@@ -21,10 +21,10 @@
     </div>
 
     <div class="col-lg-8">
-        <g:each in="${loja.Produto.findAllByCategoria(categoria)}" var="produto">
+        <g:each in="${loja.Produto.findAllByCategoria(categoria)}" var="produto" status="i">
             <div class="col-lg-6 col-sm-6 ">
                 <div class="thumbnail">
-                    <asset:image src="img/Produtos/${produto.id}.png"/>
+                    <asset:image src="img/Produtos/${produto.foto}"/>
                     <div class="caption">
                         <h3>${produto.nome}</h3>
 

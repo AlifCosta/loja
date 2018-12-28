@@ -29,6 +29,11 @@
 
             <div class="row">
                 <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+                    <g:if test="${status}">
+                        <div class="alert alert-danger">
+                            <strong>Erro!</strong> ${status}
+                        </div>
+                    </g:if>
                     <g:form controller="Usuario">
                         <h2>Entre <small>It's free and always will be.</small></h2>
                         <hr class="colorgraph">

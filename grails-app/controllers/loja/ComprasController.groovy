@@ -18,10 +18,10 @@ class ComprasController {
         def soma = 0
         (carrinho.produtos).collect{soma=soma+it.preco}
         def qtd = (carrinho.produtos).size()
-        carrinho.produtos.removeAll()
+        carrinho.produtos.clear()
         def compra = new Compras('carrinho':carrinho,'enderecoEntrega':endereco,'total':soma,'qtdProduto':qtd,'data':dataFormatada)
         compra.save(flush:true, failOnError: true)
         carrinho.save(flush:true, failOnError: true)
-        redirect controller:"menu"
+        respond Compras.last(), view: "/index"
     }
 }

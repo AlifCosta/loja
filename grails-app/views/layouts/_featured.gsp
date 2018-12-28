@@ -13,30 +13,30 @@
                             <asset:image src="img/slides/flexslider/1.jpg"/>
 
                             <div class="flex-caption">
-                                <h3>Modern Design</h3>
+                                <h3>Localização</h3>
 
-                                <p>Duis fermentum auctor ligula ac malesuada. Mauris et metus odio, in pulvinar urna</p>
-                                <a href="#" class="btn btn-theme">Learn More</a>
+                                <p>Essa empresa ficticia é falsamente localizada no Midway Mall</p>
+                                <a href="#" class="btn btn-theme">Mais</a>
                             </div>
                         </li>
                         <li>
                             <asset:image src="img/slides/flexslider/2.jpg"/>
 
                             <div class="flex-caption">
-                                <h3>Fully Responsive</h3>
+                                <h3>A maior</h3>
 
-                                <p>Sodales neque vitae justo sollicitudin aliquet sit amet diam curabitur sed fermentum.</p>
-                                <a href="#" class="btn btn-theme">Learn More</a>
+                                <p>Nossa empresa, mesmo sendo fictícia, é maior do estado </p>
+                                <a href="#" class="btn btn-theme">Mais</a>
                             </div>
                         </li>
                         <li>
                             <asset:image src="img/slides/flexslider/3.jpg"/>
 
                             <div class="flex-caption">
-                                <h3>Clean & Fast</h3>
+                                <h3>Os mais variados produtos</h3>
 
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit donec mer lacinia.</p>
-                                <a href="#" class="btn btn-theme">Learn More</a>
+                                <p>Dispomos dos mais variados produtos pra voce e sua familia...Para todos os gostos</p>
+                                <a href="#" class="btn btn-theme">Mais</a>
                             </div>
                         </li>
                     </ul>

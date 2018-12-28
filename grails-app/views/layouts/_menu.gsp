@@ -1,3 +1,4 @@
+<%@ page import="loja.Carrinho" %>
 <header>
     <div class="top">
         <div class="container">
@@ -36,6 +37,30 @@
 
             <div class="navbar-collapse collapse ">
                 <ul class="nav navbar-nav">
+                    <g:if test="${session.usuario}">
+                        <li class="dropdown active">
+                            <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false"><span style="color: #6D0C1F">${session.usuario.nome}</span><i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><g:link controller="menu" action="logout">Sair</g:link></li>
+                                <g:set var="soma" value="${0}"/>
+                                <g:set var="total" value="${(loja.Carrinho.findByUsuario(session.usuario)).produtos.collect {soma+=it.preco}}"/>
+                                <g:if test="${soma}"><li><g:link controller="compras" action="comprar">Comprar (${soma} R$)</g:link></li></g:if>
+                                <g:if test="${session.usuario.administrador}">
+                                    <li class="dropdown-submenu">
+                                    <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown">Area do gerente</a>
+                                    <ul class="dropdown-menu">
+                                        <li><g:link controller="menu" action="cadastrarCategoria">Registrar categoria</g:link></li>
+                                        <li><g:link controller="menu" action="cadastrarAdministrador">Registrar gerente</g:link></li>
+                                        <g:if test="${loja.Categoria.list()}">
+                                        <li><g:link controller="menu" action="cadastrarProdutos">Registrar produto</g:link></li>
+                                        </g:if>
+                                    </ul>
+                                </li>
+                                </g:if>
+                            </ul>
+                        </li>
+                    </g:if>
+
                     <li><g:link controller="Menu">Home</g:link></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0"
@@ -43,24 +68,13 @@
                         <ul class="dropdown-menu">
                             <g:set var="categorias"/>
                             <g:each in="${loja.Categoria.list()}" var="c">
-                                <li><g:link controller="Categoria" action="listar" id="${c.id}">${c.categoria}</g:link></li>
+                                <li><g:link controller="Categoria" action="listar" id="${c.id}">${c.nome}</g:link></li>
                             </g:each>
                         </ul>
                     </li>
                     <li><g:link controller="Menu" action="contatar">Contato</g:link></li>
                     <li><g:link controller="Menu" action="cadastro">Cadastrar-se</g:link></li>
                     <li><g:link controller="Menu" action="login">Entrar</g:link></li>
-                    <g:if test="${(session.usuario?.cliente)}">
-                        <li class="dropdown active">
-                            <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false"><span style="color: #6D0C1F">${session.usuario.nome}</span><i class="fa fa-angle-down"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><g:link controller="menu" action="logout">Sair</g:link></li>
-                                <g:set var="x" value="${0}"/>
-                                <g:set var="total" value="${(loja.Carrinho.findByUsuario(session.usuario)).produtos.collect {x=x+it.preco}}"/>
-                                <li><g:link controller="compras" action="comprar">Comprar (${x} R$)</g:link></li>
-                            </ul>
-                        </li>
-                    </g:if>
                 </ul>
             </div>
         </div>

@@ -2,12 +2,12 @@ package loja
 
 class Carrinho {
     static belongsTo=[usuario:Usuario]
-    static hasMany = [produtos:Produto]
-    static hasOne = [compra:Compras]
+    static hasMany = [produtos:Produto,compras:Compras]
 
 
     static constraints = {
-        compra(nullable:true,blank:true)
+        compras(nullable:true,blank:true)
         produtos(nullable:true,blank:true)
+        usuario(unique:true)
     }
 }

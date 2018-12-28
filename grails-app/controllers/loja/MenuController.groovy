@@ -16,6 +16,16 @@ class MenuController {
     }
     def logout(){
         session.usuario = null
+        session.invalidate()
         render view:"/index"
+    }
+    def cadastrarCategoria(){
+        render view: "/cadastrar-categorias"
+    }
+    def cadastrarProdutos(){
+        render view: "/cadastrar-produtos"
+    }
+    def cadastrarAdministrador(){
+        render view: "/cadastrar_administrador"
     }
 }
