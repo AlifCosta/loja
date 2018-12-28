@@ -102,7 +102,7 @@ dataSource:
 environments:
     development:
         dataSource:
-            dbCreate: create-drop
+            dbCreate: update
             url: jdbc:mysql://localhost:3306/loja
     test:
         dataSource:
@@ -110,8 +110,13 @@ environments:
             url: jdbc:h2:mem:testDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
     production:
         dataSource:
-            dbCreate: none
-            url: jdbc:h2:./prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
+            pooled: true
+            jmxExport: true
+            driverClassName: com.mysql.jdbc.Driver
+            username: root
+            password: ''
+            dbCreate: update
+            url: jdbc:mysql://localhost:3306/loja
             properties:
                 jmxEnabled: true
                 initialSize: 5
